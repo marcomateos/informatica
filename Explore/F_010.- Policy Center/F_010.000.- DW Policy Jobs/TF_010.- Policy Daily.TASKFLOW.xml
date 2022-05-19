@@ -1,0 +1,426 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>q0mdz9Iqy3eHRi9-gt-9192506-2022-05-16T18:57:32.264Z::tf.xml</types1:EntryId>
+      <types1:Name>TF_010_-_Policy_Daily</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>ernestopNMM</types1:CreatedBy>
+      <types1:CreationDate>2022-05-16T18:57:32Z</types1:CreationDate>
+      <types1:ModifiedBy>ernestopNMM</types1:ModifiedBy>
+      <types1:ModificationDate>2022-05-16T20:21:51Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>ernestopNMM</types1:PublishedBy>
+      <types1:PublicationDate>2022-05-16T20:21:56Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.TF_010_-_Policy_Daily/TF_010_-_Policy_Daily.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="TF_010.- Policy Daily"
+                   name="TF_010_-_Policy_Daily"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="M 010 010 110 - Stg Contact Addres"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:M-010.010.110.--Stg-Contact-Addres</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="M 010 010 120 - Stg Temporary Tables"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:M-010.010.120.--Stg-Temporary-Tables</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="M 010 010 130 - Stg D Contact"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:M-010.010.130.--Stg-D-Contact</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="M 010 020 020 - Update Contact Current Flag"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:M-010.020.020.--Update-Contact-Current-Flag</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l3961amg" targetId="l3961an2"/>
+               </start>
+               <eventContainer id="l3961an2">
+                  <service id="l3961amf">
+                     <title>M 010 010 110 - Stg Contact Addres</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">M_010.010.110.- Stg Contact Addres</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">jBlmuvgMam5evjaTH3SIap</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="M-010.010.110.--Stg-Contact-Addres">temp.M 010 010 110 - Stg Contact Addres</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 110 - Stg Contact Addres/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="l3961ann" targetId="l3961ao9"/>
+                  <events>
+                     <catch faultField="temp.M 010 010 110 - Stg Contact Addres/fault"
+                            id="l3961an0"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.M 010 010 110 - Stg Contact Addres/fault"
+                            id="l3961an1"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="l3961ao9">
+                  <service id="l3961anm">
+                     <title>M 010 010 120 - Stg Temporary Tables</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">M_010.010.120.- Stg Temporary Tables</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">lU7FRvfYeUibrCwVo5dNmb</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="M-010.010.120.--Stg-Temporary-Tables">temp.M 010 010 120 - Stg Temporary Tables</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 120 - Stg Temporary Tables/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="l3961aou" targetId="l3961apg"/>
+                  <events>
+                     <catch faultField="temp.M 010 010 120 - Stg Temporary Tables/fault"
+                            id="l3961ao7"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.M 010 010 120 - Stg Temporary Tables/fault"
+                            id="l3961ao8"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="l3961apg">
+                  <service id="l3961aot">
+                     <title>M 010 010 130 - Stg D Contact</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">M_010.010.130.- Stg D Contact</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">b815FvHcZU6bE7qsKTxEwP</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="M-010.010.130.--Stg-D-Contact">temp.M 010 010 130 - Stg D Contact</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.M 010 010 130 - Stg D Contact/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.M 010 010 130 - Stg D Contact/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.M 010 010 130 - Stg D Contact/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.M 010 010 130 - Stg D Contact/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.M 010 010 130 - Stg D Contact/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="l3961b1u" targetId="l3961b2g"/>
+                  <events>
+                     <catch faultField="temp.M 010 010 130 - Stg D Contact/fault"
+                            id="l3961ape"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.M 010 010 130 - Stg D Contact/fault"
+                            id="l3961apf"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="l3961b2g">
+                  <service id="l3961b1t">
+                     <title>M 010 020 020 - Update Contact Current Flag</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">M_010.020.020.- Update Contact Current Flag</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">5yK67f4zDisfRnQHAWqdAS</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="M-010.020.020.--Update-Contact-Current-Flag">temp.M 010 020 020 - Update Contact Current Flag</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.M 010 020 020 - Update Contact Current Flag/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="l3961b1v" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.M 010 020 020 - Update Contact Current Flag/fault"
+                            id="l3961b2e"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.M 010 020 020 - Update Contact Current Flag/fault"
+                            id="l3961b2f"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="M-010.010.110.--Stg-Contact-Addres"
+                              isByCopy="true"
+                              name="M-010.010.110.--Stg-Contact-Addres">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="M-010.010.120.--Stg-Temporary-Tables"
+                              isByCopy="true"
+                              name="M-010.010.120.--Stg-Temporary-Tables">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="M-010.010.130.--Stg-D-Contact"
+                              isByCopy="true"
+                              name="M-010.010.130.--Stg-D-Contact">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="M-010.020.020.--Update-Contact-Current-Flag"
+                              isByCopy="true"
+                              name="M-010.020.020.--Update-Contact-Current-Flag">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>7KKj30YuftxgE1m8ZcaKgI</types1:GUID>
+      <types1:DisplayName>TF_010.- Policy Daily</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2022-05-19T18:37:14.625Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,116 @@
+{
+  "objectInfo" : {
+    "id" : "7KKj30YuftxgE1m8ZcaKgI",
+    "name" : "TF_010.- Policy Daily",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "q0mdz9Iqy3eHRi9-gt-9192506-2022-05-16T18:57:32.264Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "lU7FRvfYeUibrCwVo5dNmb",
+    "name" : "M_010.010.120.- Stg Temporary Tables",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C1Y50Z00000000001G"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/F_010.- Policy Center/F_010.015.- Stage Table Task Mappings"
+  }, {
+    "id" : "5yK67f4zDisfRnQHAWqdAS",
+    "name" : "M_010.020.020.- Update Contact Current Flag",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C1Y50Z00000000001I"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/F_010.- Policy Center/F_010.015.- Stage Table Task Mappings"
+  }, {
+    "id" : "b815FvHcZU6bE7qsKTxEwP",
+    "name" : "M_010.010.130.- Stg D Contact",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C1Y50Z00000000001H"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/F_010.- Policy Center/F_010.015.- Stage Table Task Mappings"
+  }, {
+    "id" : "jBlmuvgMam5evjaTH3SIap",
+    "name" : "M_010.010.110.- Stg Contact Addres",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C1Y50Z00000000001F"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/F_010.- Policy Center/F_010.015.- Stage Table Task Mappings"
+  } ]
+}

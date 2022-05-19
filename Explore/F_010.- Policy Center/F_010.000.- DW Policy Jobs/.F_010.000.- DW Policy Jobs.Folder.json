@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "6bZRSqXtAC7e8jOU04fU04",
+    "name" : "F_010.000.- DW Policy Jobs",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Policy Workflows",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

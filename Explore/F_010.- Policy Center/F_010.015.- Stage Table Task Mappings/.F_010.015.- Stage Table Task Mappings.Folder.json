@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "4b6EfRoGv4FhO3b09FTr4K",
+    "name" : "F_010.015.- Stage Table Task Mappings",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}
